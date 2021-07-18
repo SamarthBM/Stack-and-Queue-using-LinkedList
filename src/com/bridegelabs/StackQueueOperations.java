@@ -7,7 +7,9 @@
 package com.bridegelabs;
 
 public class StackQueueOperations {
-	private MyNode top;
+	MyNode top;
+	MyNode front = null;
+	MyNode rear = null;
 
 	/*
 	 * purpose: Method to add elements to stack
@@ -56,6 +58,39 @@ public class StackQueueOperations {
 			MyNode temp = top;
 			while (temp.next != null) {
 				System.out.println(temp.key);
+				temp = temp.next;
+			}
+			System.out.println(temp.key);
+		}
+	}
+
+	/* Implementing methods for Queue operation */
+
+	/*
+	 * purpose: Method to add elements to Queue
+	 * 
+	 * @param element: element to be added.
+	 */
+	public void enqueue(int element) {
+		MyNode node = new MyNode();
+		node.key = element;
+		if (front == null) {
+			front = node;
+			rear = node;
+		} else {
+			rear.next = node;
+			rear = node;
+		}
+	}
+
+	/* purpose: Method to display the elements in Queue. */
+	public void displayQueue() {
+		if (front == null)
+			System.out.println("Stack is Empty");
+		else {
+			MyNode temp = front;
+			while (temp.next != null) {
+				System.out.print(temp.key + " ");
 				temp = temp.next;
 			}
 			System.out.println(temp.key);
