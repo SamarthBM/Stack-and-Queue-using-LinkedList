@@ -1,6 +1,6 @@
  
 /****************************************************************
- * Purpose : To add elements to queue.
+ * Purpose : To perform stack and queue.
  * @author Samarth BM
 ***************************************************************/
 package com.bridegelabs;
