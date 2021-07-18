@@ -19,8 +19,9 @@ public class StackQueueRunner {
 		System.out.println("Press 4 to display stack");
 		System.out.println("========Queue Operations=======");
 		System.out.println("Press 5 to Enqueue");
-		System.out.println("Press 6 to display Queue");
-		System.out.println("Press 7 to Quit");
+		System.out.println("Press 6 to Dequeue");
+		System.out.println("Press 7 to display Queue");
+		System.out.println("Press 8 to Quit");
 		int choice = sc.nextInt();
 		return choice;
 	}
@@ -64,11 +65,16 @@ public class StackQueueRunner {
 				break;
 				
 			case 6:
+				performStack.dequeue();
+				flag = true;
+				break;
+				
+			case 7:
 				performStack.displayQueue();
 				flag = true;
 				break;	
 
-			case 7:
+			case 8:
 				flag = false;
 				break;
 

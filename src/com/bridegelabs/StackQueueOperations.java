@@ -83,6 +83,20 @@ public class StackQueueOperations {
 		}
 	}
 
+	/* purpose: Method to remove elements from Queue. */
+	public void dequeue() {
+		if (front == null)
+			System.out.println("\n" + "Queue Underflow");
+
+		MyNode temp = front;
+		System.out.printf("Removing %d\n", temp.key);
+		front = front.next;
+
+		if (front == null)
+			rear = null;
+
+	}
+
 	/* purpose: Method to display the elements in Queue. */
 	public void displayQueue() {
 		if (front == null)
