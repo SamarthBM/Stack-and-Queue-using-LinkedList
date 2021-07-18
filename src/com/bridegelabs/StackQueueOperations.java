@@ -25,6 +25,29 @@ public class StackQueueOperations {
 			top = node;
 		}
 	}
+
+	/* purpose: Method to delete element from stack. */
+	public void deleteElementFromStack() {
+		if (top == null)
+			System.out.println("\n" + "Stack is Empty!");
+		else {
+			MyNode temp = top;
+			System.out.printf("Deleted element: %d", temp.key);
+			System.out.println();
+			top = temp.next;
+		}
+	}
+
+	/* purpose: Method to display last element in stack. */
+	public int peek() {
+		if (top != null)
+			return top.key;
+		else {
+			System.out.println("Stack is empty");
+			return 0;
+		}
+	}
+
 	/* purpose: Method to display the elements in stack */
 	public void displayStack() {
 		if (top == null)
